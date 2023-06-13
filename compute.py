@@ -39,15 +39,15 @@ def get_instances_within_budget(budget, instances):
 
     return selected_instances, total_gpus, gpu_report
 
+if __name__ == "__main__":
+    # Read instances from Excel file
+    fn = "Amazon EC2 Instance Comparison.xlsx"
+    instances = read_instances_from_excel(fn)  # Replace with your file path
 
-# Read instances from Excel file
-fn = "Amazon EC2 Instance Comparison.xlsx"
-instances = read_instances_from_excel(fn)  # Replace with your file path
+    # Set your budget here
+    budget = 100000
 
-# Set your budget here
-budget = 100000
+    selected_instances, total_gpus, gpu_report = get_instances_within_budget(budget, instances)
 
-selected_instances, total_gpus, gpu_report = get_instances_within_budget(budget, instances)
-
-print(f"Selected {len(selected_instances)} instances with total of {total_gpus} GPUs.")
-print(f"GPUs: {gpu_report}")
+    print(f"Selected {len(selected_instances)} instances with total of {total_gpus} GPUs.")
+    print(f"GPUs: {gpu_report}")
