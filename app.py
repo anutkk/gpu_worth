@@ -9,7 +9,7 @@ instances = read_instances_from_excel(excel_file_path)
 
 # Set the title of the app
 st.title('How many GPUs am I worth?')
-st.markdown("## How many GPUs could be rented instead of me")
+st.markdown("### How many GPUs could be rented instead of me")
 
 
 # Ask the user for their budget
@@ -20,8 +20,8 @@ if st.button('Calculate'):
     selected_instances, total_gpus, gpu_report = get_instances_within_budget(budget, instances)
 
     # Display the results
-    st.write(f"Selected {len(selected_instances)} instances with total of {total_gpus} GPUs.")
-    st.write(f"GPUs: {gpu_report}")
+    st.markdown(f"## We could have rented {len(selected_instances)} instances with a total of {total_gpus} GPUs.")
+    st.markdown(f"#### GPUs: {gpu_report}")
     st.balloons()
 
     
