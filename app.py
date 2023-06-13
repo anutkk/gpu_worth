@@ -20,8 +20,8 @@ if st.button('Calculate'):
     selected_instances, total_gpus, gpu_report = get_instances_within_budget(budget, instances)
 
     # Display the results
-    st.markdown(f"## We could have rented {len(selected_instances)} instances with a total of {total_gpus} GPUs.")
-    st.markdown(f"#### GPUs: {gpu_report}")
+    st.markdown(f"## You are worth {total_gpus} GPUs.")
+    st.markdown(f"#### Instead of hiring you, your employer could have rented {len(selected_instances)} instances with the following GPUs: {gpu_report}.")
     st.balloons()
 
     
