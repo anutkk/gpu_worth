@@ -13,7 +13,9 @@ st.markdown("### How many GPUs could be rented instead of me")
 
 
 # Ask the user for their budget
-budget = st.number_input('Enter your monthly salary in Israeli shekels', min_value=0.0)
+budget = st.number_input('Enter your monthly salary in Israeli shekels', min_value=0, max_value=200000)
+st.caption("Privacy: I don't keep this data, but Streamlit Cloud may.")
+
 
 # When the 'Calculate' button is pressed
 if st.button('Calculate'):
