@@ -9,9 +9,11 @@ instances = read_instances_from_excel(excel_file_path)
 
 # Set the title of the app
 st.title('How many GPUs am I worth?')
+st.markdown("## How many GPUs could be rented instead of me")
+
 
 # Ask the user for their budget
-budget = st.number_input('Enter your salary in Israeli shekels', min_value=0.0)
+budget = st.number_input('Enter your monthly salary in Israeli shekels', min_value=0.0)
 
 # When the 'Calculate' button is pressed
 if st.button('Calculate'):
