@@ -20,3 +20,7 @@ if st.button('Calculate'):
     # Display the results
     st.write(f"Selected {len(selected_instances)} instances with total of {total_gpus} GPUs.")
     st.write(f"GPUs: {gpu_report}")
+    st.balloons()
+
+    
+st.caption("Code by [Shmuel Londner](https://github.com/anutkk).")
