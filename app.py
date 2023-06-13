@@ -2,7 +2,7 @@ import streamlit as st
 from compute import get_instances_within_budget, read_instances_from_excel
 
 # Set the path to the Excel file
-excel_file_path = 'instances.xlsx'  # Replace with your file path
+excel_file_path = "Amazon EC2 Instance Comparison.xlsx"  # Replace with your file path
 
 # Load instances from the Excel file
 instances = read_instances_from_excel(excel_file_path)
